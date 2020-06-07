@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/FEW-2.3-React/static/css/main.61a6ae03.chunk.css",
+    "main.js": "/FEW-2.3-React/static/js/main.6535622e.chunk.js",
+    "main.js.map": "/FEW-2.3-React/static/js/main.6535622e.chunk.js.map",
+    "runtime-main.js": "/FEW-2.3-React/static/js/runtime-main.5019e2e4.js",
+    "runtime-main.js.map": "/FEW-2.3-React/static/js/runtime-main.5019e2e4.js.map",
+    "static/js/2.128bd5dd.chunk.js": "/FEW-2.3-React/static/js/2.128bd5dd.chunk.js",
+    "static/js/2.128bd5dd.chunk.js.map": "/FEW-2.3-React/static/js/2.128bd5dd.chunk.js.map",
+    "index.html": "/FEW-2.3-React/index.html",
+    "precache-manifest.17a60d58e521ea3d6e7f012146f29db2.js": "/FEW-2.3-React/precache-manifest.17a60d58e521ea3d6e7f012146f29db2.js",
+    "service-worker.js": "/FEW-2.3-React/service-worker.js",
+    "static/css/main.61a6ae03.chunk.css.map": "/FEW-2.3-React/static/css/main.61a6ae03.chunk.css.map",
+    "static/js/2.128bd5dd.chunk.js.LICENSE.txt": "/FEW-2.3-React/static/js/2.128bd5dd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5019e2e4.js",
+    "static/js/2.128bd5dd.chunk.js",
+    "static/css/main.61a6ae03.chunk.css",
+    "static/js/main.6535622e.chunk.js"
+  ]
+}
