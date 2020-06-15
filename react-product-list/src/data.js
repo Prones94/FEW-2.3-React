@@ -1,20 +1,29 @@
 import data from './data.json'
-export default data
 
-const categories = data.map((item) => {
+export const categories = data.map((item) => {
     return item.category
 })
 
-const categorySet = new Set(categories)
-export const uniqueCategories = Array.from(categorySet)
+const categoryObjects = categories.reduce((object, category)=>{
+    object[category] = null
+    return object
+},{})
 
-export const categoriesWithCounts = data.reduce((obj, item) => {
-    if (item.category in obj){
-        obj[item.category] += 1
+export const uniqueCategories = Object.keys(categoryObjects)
+
+export const categoriesWithCounts = data.reduce((item, {category})=> {
+    if(item.category !== null){
+        item[category] += 1
     } else {
-        obj[item.category] = 1
+        item[category] = 1
     }
-    return obj
+    return item 
 }, {})
 
-export 
+export const objectInventory  = Object.entries(categoriesWithCounts).reduce((array, entry) => {
+    const [key, value] = entry
+    array.push({name: key, count: value})
+    return array
+}, [])
+
+export default data
