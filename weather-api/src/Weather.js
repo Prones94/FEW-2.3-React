@@ -1,4 +1,7 @@
 import React from 'react'
+import Temperature from './Temperature'
+import  WeatherDescription  from './WeatherDescription'
+import Atmosphere from './Atmosphere'
 
 export default function Weather(props) {
     if(props.weatherData === null){
@@ -10,12 +13,15 @@ export default function Weather(props) {
 
     return (
         <div>
-            <div>Title {main}</div>
-            <div>Description: {description}</div>
-            <div>Icon: {icon}</div>
-            <div>Pressure: {pressure}</div>
-            <div>Humidity: {humidity}</div>
-            <div>Temp Min: {temp_min} Max: {temp_max}</div>
+            <WeatherDescription main={main} description={description} icon = {icon} />
+            <Temperature temp = {temp} />
+            <Atmosphere 
+                temp ={temp} 
+                pressure={pressure} 
+                humidity={humidity} 
+                temp_min={temp_min}
+                temp_max={temp_max}
+                />
         </div>
     )
 }
