@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/GridSquare.css'
 
 class GridSquare extends Component {
     render() {
