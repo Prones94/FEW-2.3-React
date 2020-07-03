@@ -1,28 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
 import Weather from './Weather'
-
+import rootReducer from './reducers'
 import './App.css';
-import Form from './Form'
+import WeatherDisplay from './WeatherDisplay'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      inputValue: '94010',     // Used to hold value entered in the input field
-      weatherData: null,  // Used to hold data loaded from the weather API
-    }
-  }
 
-  render() {
-    const {weatherData} = this.state
-    return (
-      <div className="App">
-        <Form handleSubmit={(e)=> this.handleSubmit(e)} />
-        <Weather weatherData = {weatherData} />
-      </div>
-    );
-  }
+// Create the store with middleware
+const store = createStore(rootReducer, applyMiddleware(thunk))
+
+
+function App(){
+  return (
+    <Provider store={store}>
+    <div className="App">
+      <header className="App-header">
+        <WeatherDisplay />
+        <Weather />
+      </header>
+    </div>
+    </Provider>
+  )
 }
 
 export default App;
